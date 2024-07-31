@@ -12,6 +12,7 @@ class CustomSalesInvoice(SalesInvoice):
             sales_list = frappe.db.count('Sales Invoice',{'pos_profile':'Casher 4 Armsha', 'posting_date': datetime.now().date()})
             counter = sales_list + 1
             self.custom_daily_counter = counter
+            frappe.db.set_value(self.custom_daily_counter,counter)
         else:
             pass
 
