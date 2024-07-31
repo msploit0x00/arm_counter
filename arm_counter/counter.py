@@ -7,7 +7,7 @@ from datetime import datetime
 
 
 class CustomSalesInvoice(SalesInvoice):
-    def on_submit(self):
+    def before_submit(self):
         # Ensure the counter is set to 0 initially
         counter = 0
 
