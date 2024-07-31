@@ -109,7 +109,7 @@ app_license = "MIT"
 # Override standard doctype classes
 
 override_doctype_class = {
-	"Sales Invoice": "arm_counter.counter.CustomSalesInvocie"
+	"Sales Invoice": "arm_counter.counter.CustomSalesInvoice"
 }
 
 # Document Events
