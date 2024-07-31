@@ -27,5 +27,5 @@ class CustomSalesInvoice(SalesInvoice):
             self.set_missing_values()
             self.flags.ignore_permissions = True
             frappe.flags.ignore_account_permission = True
-            frappe.db.set_value(self.custom_daily_counter,counter)
+            frappe.db.set_value(self.custom_daily_counter2,counter)
 
