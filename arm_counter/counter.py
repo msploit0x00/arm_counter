@@ -5,7 +5,8 @@ from datetime import datetime
 
 
 class CustomSalesInvoice(SalesInvoice):
-    def after_save(self):
+    def validate(self):
+        frappe.msgprint("HERE")
         # counter = 0
         # if self.pos_profile == 'Casher 4 Armsha':
         counter = 0
@@ -27,5 +28,6 @@ class CustomSalesInvoice(SalesInvoice):
             self.set_missing_values()
             self.flags.ignore_permissions = True
             frappe.flags.ignore_account_permission = True
+            frappe.msgprint("Done")
             frappe.db.set_value(self.custom_daily_counter2,counter)
 
