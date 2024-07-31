@@ -29,5 +29,5 @@ class CustomSalesInvoice(SalesInvoice):
             self.flags.ignore_permissions = True
             frappe.flags.ignore_account_permission = True
             frappe.msgprint("Done")
-            frappe.db.set_value(self.custom_daily_counter2,counter)
+            frappe.db.set_value('Sales Invoice',self.name,self.custom_daily_counter2,counter)
 
