@@ -23,7 +23,7 @@ class CustomSalesInvoice(SalesInvoice):
             if invoices:
                 counter = len(invoices)
             # counter = sales_list + 1
-            self.custom_daily_counter = counter + 1
+            self.custom_daily_counter2 = counter + 1
             self.set_missing_values()
             self.flags.ignore_permissions = True
             frappe.flags.ignore_account_permission = True
