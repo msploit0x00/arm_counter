@@ -14,7 +14,7 @@ class CustomSalesInvoice(SalesInvoice):
         # Fetch the list of invoices for the given date and POS profile
         invoices = frappe.get_list(
             "Sales Invoice",
-            filters={"posting_date": self.posting_date, 'pos_profile': 'Casher 4 Armsha'},
+            filters={"posting_date": datetime.now().date(), 'pos_profile': 'Casher 4 Armsha'},
             fields=["name"],
             limit_start=0,
             limit_page_length=5000,
