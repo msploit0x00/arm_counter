@@ -13,5 +13,5 @@ class CustomSalesInvoice(SalesInvoice):
             counter = sales_list + 1
             self.custom_daily_counter = counter
         else:
-            continue
+            pass
 
